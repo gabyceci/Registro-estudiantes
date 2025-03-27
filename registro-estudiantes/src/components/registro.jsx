@@ -8,7 +8,9 @@ const Registro = () => {
     const [carnet, setCarnet] = useState('');
 
     const addEstudiante = () => {
-        if (nombre.trim() === '' || edad.trim() === '' || carnet.trim() === '') return;
+        if (nombre.trim() === '' || edad.trim() === '' || carnet.trim() === '') 
+            
+            return;
 
         setEstudiantes([...estudiantes, { id: Date.now(), nombre, edad, carnet }]);
         setNombre('');
@@ -66,7 +68,7 @@ const Registro = () => {
                             {estudiante.nombre} | {estudiante.edad} años | Carnet: {estudiante.carnet}
                             <button 
                                 onClick={() => deleteEstudiante(estudiante.id)}
-                                style={{ marginLeft: '10px', backgroundColor: 'red', color: 'white', border: 'none', padding: '5px', cursor: 'pointer' }}>
+                                style={{ marginLeft: '10px', backgroundColor: 'white', color: 'red', border: 'none', padding: '5px', cursor: 'pointer' }}>
                                 X
                             </button>
                             <br /><br />
